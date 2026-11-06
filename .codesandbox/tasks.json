@@ -1,0 +1,34 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install dependencies",
+      "command": "npm ci --no-audit --no-fund"
+    }
+  ],
+  "tasks": {
+    "dev": {
+      "name": "Dev server",
+      "command": "npm run dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "test": {
+      "name": "Tests: all",
+      "command": "npm test"
+    },
+    "test:warm-up": {
+      "name": "Tests: warm-up",
+      "command": "npm run test:warm-up"
+    },
+    "test:task-1": {
+      "name": "Tests: task 1",
+      "command": "npm run test:task-1"
+    },
+    "test:task-2": {
+      "name": "Tests: task 2",
+      "command": "npm run test:task-2"
+    }
+  }
+}
